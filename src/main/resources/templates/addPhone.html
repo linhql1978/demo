@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/css/myCSS.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header th:insert="fragments/hearder.html::header1">Header</header>
+
+    <div class="add-phone">
+        <div>
+            <form action="" th:action="@{/addPhone}" method="post" enctype="multipart/form-data">
+                <label for="name">Name</label>
+                <input type="text" id="name" th:field="${phone.name}" placeholder="Name..">
+
+                <label for="price">Price</label>
+                <input type="text" id="price" th:field="${phone.price}" placeholder="Price..">
+
+                <label for="categorize">Categorize</label>
+                <select id="categorize" th:field="${phoneCategorize.name}">
+                    <option value="IPHONE">IPHONE</option>
+                    <option value="SAMSUNG">SAMSUNG</option>
+                    <option value="SONY">SONY</option>
+                    <option value="VSMART">VSMART</option>
+                    <option value="BPHONE">BPHONE</option>
+                    <option value="NOKIA">NOKIA</option>
+                </select>
+
+                <label for="ram">Ram</label>
+                <input type="text" id="ram" th:field="${phoneDetail.ram}" placeholder="Ram..">
+
+                <label for="rom">Rom</label>
+                <input type="text" id="rom" th:field="${phoneDetail.rom}" placeholder="Rom..">
+
+                <label for="screen">Screen</label>
+                <input type="text" id="screen" th:field="${phoneDetail.screen}" placeholder="Screen..">
+
+                <label for="chip">Chip</label>
+                <input type="text" id="chip" th:field="${phoneDetail.chip}" placeholder="Chip..">
+
+                <label for="image">Image</label>
+                <input type="file" id="image" th:field="${collage.image}">
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <footer th:insert="fragments/footer.html::footer">Footer</footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/myCSS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header th:insert="fragments/hearder.html::header"> This is Header</header>
+
+    <div>
+        <div class="box">
+            <a href="#"><img src="images/Iphone-11.png"></a>
+            <p>Iphone 11</p>
+        </div>
+        <div class="box">
+            <a href="#"><img src="images/Iphone-X.jpg"></a>
+            <p>Iphone X</p>
+        </div>
+        <div class="box">
+            <a href="#"><img src="images/Iphone-XR.webp"></a>
+            <p>Iphone XR</p>
+        </div>
+        <div class="box">
+            <a href="#"><img src="images/Iphone-XS.png"></a>
+            <p>Iphone XS</p>
+        </div>
+    </div>
+
+    <footer th:insert="fragments/footer.html::footer">This is Footer</footer>
+</body>
+</html>
